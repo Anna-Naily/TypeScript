@@ -8,7 +8,25 @@ const getMaxDate = (date:string):string =>{
   return maxDate;
 }
 
+
+interface SearchFormData{
+  city: string
+  arrivalDate: string
+  departureDate:string
+  maxPrice: number
+}
+const searchHandler=(city:string,arrivalDate:string,departureDate:string,maxPrice:number)=>{
+  const outputData = {city,arrivalDate,departureDate,maxPrice}
+  search(outputData);
+}
+
+function search (searchItem:SearchFormData){
+  console.log(searchItem.city, searchItem.arrivalDate, searchItem.departureDate, searchItem.maxPrice)
+}
+
 export function renderSearchFormBlock (arrivalDate:string, departureDate:string) {
+
+  searchHandler('Saint Petersburg',arrivalDate, departureDate, 2)
   renderBlock(
     'search-form-block',
     `
