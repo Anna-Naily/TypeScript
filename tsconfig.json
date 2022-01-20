@@ -6,6 +6,6 @@
         "moduleResolution": "node"
     },
     "files": [
-        "src/index.ts"
+        "index.ts"
     ]
 }
